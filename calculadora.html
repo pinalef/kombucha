@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <title>Preparación</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- header section strats -->
+  <header class="header_section">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/soda (2).png" alt="" /><span>
+            Kombucha
+          </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+            <ul class="navbar-nav  ">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Inicio </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="que-es.html"> ¿Qué es la kombucha?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="preparacion.html"> Preparación <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="calculadora.html"> Calculadora </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mapa.html"> Mapa </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center my-5">Calcula tu kombucha</h1>
+          <h3 class="custom_heading-text mb-5">Indicanos cuánto tienes de té iniciador para poder calcular tu próxima kombucha</h3>
+          <div class="border border-warning rounded">
+            <p class="custom_heading-text">No olvides seleccionar la unidad de medida para entregarte los resultados</p>
+            <form class="d-flex justify-content-center mx-auto">
+              <div class="form-group">
+                <div class="row">
+                  <label for="select" class="col-sm-4 col-form-label">¿Cuánto Té Iniciador tienes?</label>
+                  <input type="number" class="form-control col-sm-2" id="input" placeholder="Cantidad...">
+                  <select id="select" class="col-sm-4 ml-3 browser-default custom-select">
+                    <option selected>Selecciona tu medida</option>
+                    <option value="1">oz</option>
+                    <option value="2">taza</option>
+                    <option value="3">ml</option>
+                    <option value="4">L</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row mx-auto">
+          <div class="col-md-12">
+            <table class="table">
+
+              <caption>Calcula las cantidades que necesitas para tu preparación</caption>
+              <thead>
+                <tr>
+                  <th scope="col">té negro</th>
+                  <th scope="col">azúcar</th>
+                  <th scope="col">agua</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="row1">
+                </tr>
+                <tr id="row2">
+                </tr>
+                <tr id="row3">
+                </tr>
+                <tr id="row4">
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+  </section>
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2020 Todos los derechos reservados</a>
+    </p>
+  </section>
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+  <script src="js/fraction.min.js"></script>
+  <script>
+    $(document).ready(function () {
+
+      $('#select').change(function () {
+        $('[data-toggle="popover"]').popover();
+        var e = parseInt($(this).val());
+        var input = $('#input').val();
+        switch (e) {
+
+          case 1:
+
+            /*  alert('case 1: saldria ' + parseInt(input) * 8 + 'oz'); */
+            var a = new Fraction(input * 0.75);
+            var b = new Fraction(input * 0.25);
+            /*             var c = new Fraction(((input * 8) * 0.25) / 16); */
+            /*    var d = new Fraction((input * 0.25) * 2); */
+            /*       var e = new Fraction((input * 0.5) * 2); */
+            var f = new Fraction(input * 0.5);
+            /*    var g = new Fraction((input * 0.5) * 8);
+               var h = new Fraction((input * 8) * 225); */
+
+            var j = new Fraction((input) * 7);
+            /*       var k = new Fraction((input * 7) / 8);
+                  var l = new Fraction((input * 7) * 29.57);
+                  var m = new Fraction(((input * 7) * 29.57) / 1000); */
+
+            var teaspoon_tea = a.toFraction(true);
+            var tablespoon_tea = b.toFraction(true);
+            /*       var cup_tea = c.toFraction(true);
+
+                  var tablespoon_sugar = e.toFraction(true); */
+            var oz_sugar = f.toFraction(true);
+            /*       var cup_sugar = g.toFraction(true); */
+
+            var oz_water = j.toFraction(true);
+            /*    var cup_water = k.toFraction(true);
+               var ml_water = l.toFraction(true);
+               var lt_water = m.toFraction(true); */
+
+            /*    var gr_tea = d.toFraction(false); */
+            $('#row1').html('<td>' + teaspoon_tea + ' cucharaditas  ó</td>' +
+              '<td>' + oz_sugar + ' oz </td>' +
+              '<td>' + oz_water + ' oz </td>'
+            );
+
+            $('#row2').html('<td>' + tablespoon_tea + ' cucharadas</td>');
+            /*
+              $('#row3').html('<td>' + cup_tea + ' taza</td>' +
+                '<td>' + cup_sugar + ' cucharadas </td>' +
+                '<td>' + oz_water + ' oz </td>'
+              ); */
+            break;
+          case 2:
+            var c = new Fraction(((input * 8) * 0.25) / 16);
+            var g = new Fraction(((input * 8) * 0.5) / 8);
+            var k = new Fraction(((input * 8) * 7) / 8);
+
+            var cup_tea = c.toFraction(true);
+            var cup_sugar = g.toFraction(true);
+            var cup_water = k.toFraction(true);
+            $('#row1').html('<td>' + cup_tea + ' taza </td>' +
+              '<td>' + cup_sugar + ' taza </td>' +
+              '<td>' + cup_water + ' taza </td>'
+            );
+            $('#row2').html('');
+            break;
+          case 3:
+            var gr_tea = ((input / 29.57) * 0.25) * 2;
+            var gr_sugar = (((input / 29.57) * 0.5) / 8) * 225;
+            var ml_water = ((input / 29.57) * 7) * 29.57;
+
+            $('#row1').html('<td>' + Math.round(gr_tea * 100) / 100 + ' gr </td>' +
+              '<td>' + Math.round(gr_sugar * 100) / 100 + ' gr </td>' +
+              '<td>' + ml_water + ' ml </td>'
+            );
+            $('#row2').html('');
+            break;
+          case 4:
+            var gr_tea = ((input / 0.0296) * 0.25) * 2;
+            var gr_sugar = (((input / 0.0296) * 0.5) / 8) * 225;
+            var lt_water = (((input / 0.0296) * 7) * 29.57) / 1000;
+            /* Math.round(num * 100) / 100 */
+            $('#row1').html('<td>' + Math.round(gr_tea * 100) / 100 + ' gr </td>' +
+              '<td>' + Math.round(gr_sugar * 100) / 100 + ' gr </td>' +
+              '<td>' + Math.round(lt_water * 100) / 100 + ' ml </td>'
+            );
+            $('#row2').html('');
+            break;
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>

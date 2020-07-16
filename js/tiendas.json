@@ -1,0 +1,22 @@
+[{
+    "id": 1,
+    "nombre": "Adagio Teas",
+    "direccion": "Avenida, 14 Nte. 821, Local 64, Viña del Mar",
+    "latitud": "-33.024013",
+    "longitud": "-71.5687458"
+  },
+  {
+    "id": 2,
+    "nombre": "Café Bali",
+    "direccion": "11 Nte. 1003, Viña del Mar",
+    "latitud": "-33.0130505",
+    "longitud": "-71.5455722"
+  },
+  {
+    "id": 3,
+    "nombre": "Farmacia Mapuche Makelawen",
+    "direccion": "Condell 1295, Valparaíso",
+    "latitud": "-33.0448059",
+    "longitud": "-71.6237758"
+  }
+  ]
